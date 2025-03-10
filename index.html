@@ -51,21 +51,21 @@
                     <p>Compila il form per richiedere un preventivo per i nostri servizi di sviluppo.</p>
 
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Nome</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1">
+                        <label for="name" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="name">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlInput2" class="form-label">Cognome</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput2">
+                        <label for="lastName" class="form-label">Cognome</label>
+                        <input type="text" class="form-control" id="lastName">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlInput3" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email">
                     </div>
 
                     <div class="mb-3">
-                        <label for="exampleFormControlInput2" class="form-label">Tipo di lavoro</label>
-                        <select class="form-select" aria-label="Default select example">
+                        <label for="requestedJob" class="form-label">Tipo di lavoro</label>
+                        <select class="form-select" id="requestedJob">
                             <option selected>Seleziona il tipo di lavoro</option>
                             <option value="1">Sviluppo backend</option>
                             <option value="2">Sviluppo frontend</option>
@@ -74,32 +74,39 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Textarea con Bootstrap 5</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <label for="textarea" class="form-label">Textarea con Bootstrap 5</label>
+                        <textarea class="form-control" id="textarea" rows="3"></textarea>
                     </div>
 
                     <div class="mb-3">
-                        <label for="exampleFormControlInput5" class="form-label">Codice promozionale (opzionale)</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput5">
+                        <label for="promoCode" class="form-label">Codice promozionale (opzionale)</label>
+                        <input type="text" class="form-control" id="promoCode">
                     </div>
 
+                    <!-- Checkbox Privacy -->
+
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault">
+                        <input class="form-check-input" type="checkbox" value="" id="check">
+                        <label class="form-check-label" for="check">
                             Accetto la privacy policy
                         </label>
                     </div>
 
-                    <div class="output d-flex">
-                        <div>
-                            <button type="button" class="btn btn-primary mt-5 mx-5">Calcola preventivo</button>
-                        </div>
-                        <div class="mx-5 mb-5 px-5">
-                            <h5 class="finalPrice mt-5 ml-5"><strong>Prezzo finale</strong>
-                                <br>
-                                <strong>€200</strong>,00
-                            </h5>
-                        </div>
+                    <!-- Submit and final price -->
+                    <div class="container text-center">
+                        <div class="row">
+                          <div class="col-12 col-lg-6">
+                            <div class="mb-4 mt-4">
+                                <button type="button" class="btn btn-primary">Calcola preventivo</button>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6">
+                            <div class="">
+                                <h5 class="finalPrice" style="font-weight: 600";>Prezzo finale <br>
+                                    <strong>€200</strong>,00</h5>
+                            </div>
+                          </div>
+
                 </section>
 
 
@@ -108,7 +115,7 @@
 
                 <!-- Card section -->
                 <section class="col-12 col-lg-4 col-sm-12">
-                    <div class="card mt-4" style="width: 300px;">
+                    <div class="card mt-4 mb-5 m-auto" style="width: 300px;">
                         <img src="https://transitionswealthadvisors.com/wp-content/uploads/2015/03/300x200.gif"
                             class="card-img-top" alt="img">
                         <div class="card-body">
