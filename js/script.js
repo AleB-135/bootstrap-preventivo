@@ -34,6 +34,7 @@ function gestioneForm(event){
     }
     console.log(finalPrice);
     
+    //SCONTO
     
     let discount = 0;
     if (promoCode === "YHDNU32") {
@@ -59,6 +60,8 @@ function gestioneForm(event){
     }  else 
         alert ("Il codice da te inserito non è valido. Pertanto, non sarà applicato nessuno sconto");
     
+
+        //PREZZO FINALE PER L'UTENTE
         const messageDiscount = (finalPrice - discount);
         messageElement.innerText = (messageDiscount).toFixed(2);  
 
