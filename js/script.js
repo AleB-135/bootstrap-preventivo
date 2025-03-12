@@ -34,34 +34,32 @@ function gestioneForm(event){
     }
     console.log(finalPrice);
     
+    
     let discount = 0;
     if (promoCode === "YHDNU32") {
-        discount = (finalPrice * 25 / 100)
+        discount = (finalPrice * 25 / 100);
         console.log(discount);
         alert ("Codice applicato con successo!");
     } else if (promoCode === "JANJC63") {
         discount = (finalPrice * 25 / 100)
         console.log(discount);
-        alert ("Codice applicato con successo!")
+        alert ("Codice applicato con successo!");
     } else if (promoCode === "PWKCN25") {
-        discount = (finalPrice * 25 / 100)
+        discount = (finalPrice * 25 / 100);
         console.log(discount);
-        alert ("Codice applicato con successo!")
+        alert ("Codice applicato con successo!");
     } else if (promoCode === "SJDPO96") {
         discount = (finalPrice * 25 / 100)
         console.log(discount);
-        alert ("Codice applicato con successo!")
+        alert ("Codice applicato con successo!");
     } else if (promoCode === "POCIE24") {
-        discount = (finalPrice * 25 / 100)
+        discount = (finalPrice * 25 / 100);
         console.log(discount);
-        alert ("Codice applicato con successo!")
-    } else 
-        alert ("Il codice che hai inserito non è valido. Pertanto, non verrà applicato nessuno sconto");
+        alert ("Codice applicato con successo!");
+    }  else 
+        alert ("Il codice da te inserito non è valido. Pertanto, non sarà applicato nessuno sconto");
     
+        const messageDiscount = (finalPrice - discount);
+        messageElement.innerText = (messageDiscount).toFixed(2);  
 
-
-        
-    const message = (finalPrice - (finalPrice * 25 / 100));
-    messageElement.innerText = (message).toFixed(2);
-    
 }
