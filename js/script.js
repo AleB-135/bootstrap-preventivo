@@ -11,6 +11,8 @@ const messageElement = document.getElementById("message");
 
 
 
+
+
 factoryForm.addEventListener("submit", gestioneForm);
 
     //FUNZIONE
@@ -40,29 +42,34 @@ function gestioneForm(event){
     if (promoCode === "YHDNU32") {
         discount = (finalPrice * 25 / 100);
         console.log(discount);
-        alert ("Codice applicato con successo!");
+        alert ("Codice applicato con successo. Hai diritto ad uno sconto del 25%!");
     } else if (promoCode === "JANJC63") {
         discount = (finalPrice * 25 / 100)
         console.log(discount);
-        alert ("Codice applicato con successo!");
+        alert ("Codice applicato con successo. Hai diritto ad uno sconto del 25%!");
     } else if (promoCode === "PWKCN25") {
         discount = (finalPrice * 25 / 100);
         console.log(discount);
-        alert ("Codice applicato con successo!");
+        alert ("Codice applicato con successo. Hai diritto ad uno sconto del 25%!");
     } else if (promoCode === "SJDPO96") {
         discount = (finalPrice * 25 / 100)
         console.log(discount);
-        alert ("Codice applicato con successo!");
+        alert ("Codice applicato con successo. Hai diritto ad uno sconto del 25%!");
     } else if (promoCode === "POCIE24") {
         discount = (finalPrice * 25 / 100);
         console.log(discount);
-        alert ("Codice applicato con successo!");
-    }  else 
+        alert ("Codice applicato con successo. Hai diritto ad uno sconto del 25%!");
+    } else if (promoCode === "") {
+        discount = 0;
+        console.log(discount);
+    } else 
         alert ("Il codice da te inserito non è valido. Pertanto, non sarà applicato nessuno sconto");
     
 
         //PREZZO FINALE PER L'UTENTE
+        
         const messageDiscount = (finalPrice - discount);
-        messageElement.innerText = (messageDiscount).toFixed(2);  
+        messageElement.innerHTML = `<span id="message" style="font-weight: bold; font-size: larger;">€ ${messageDiscount.toFixed(2)}</span>`;
+        
 
 }
