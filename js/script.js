@@ -9,10 +9,6 @@ const promocodeSelect = document.getElementById("promoCode");
 const messageElement = document.getElementById("message");
 
 
-
-
-
-
 factoryForm.addEventListener("submit", gestioneForm);
 
     //FUNZIONE
@@ -29,7 +25,7 @@ function gestioneForm(event){
     let finalPrice = 0;
     if (requestedJob === "Sviluppo backend") {
         finalPrice = (20.50 * 10);
-   } else if (requestedJob === "Sviluppo frontend") {
+    } else if (requestedJob === "Sviluppo frontend") {
         finalPrice = (15.30 * 10);
     } else if (requestedJob === "Analisi progettuale") {
         finalPrice = (33.60 * 10);
@@ -37,7 +33,7 @@ function gestioneForm(event){
     console.log(finalPrice);
     
     //SCONTO
-    
+    // Utilizzabile anche includes (o, in alternativa, ciclo for)
     let discount = 0;
     if (promoCode === "YHDNU32") {
         discount = (finalPrice * 25 / 100);
@@ -71,5 +67,4 @@ function gestioneForm(event){
         const messageDiscount = (finalPrice - discount);
         messageElement.innerHTML = `<span id="message" style="font-weight: bold; font-size: larger;">€ ${messageDiscount.toFixed(2)}</span>`;
         
-
 }
